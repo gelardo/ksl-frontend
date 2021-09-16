@@ -29,6 +29,9 @@
     <link href={{asset("admin/assets/css/paper-dashboard.css")}} rel="stylesheet"/>
 
     <script src={{asset("admin/assets/js/core/jquery.min.js")}}></script>
+    <style>
+        .tox .tox-tbtn {display: block !important;}
+    </style>
 </head>
 <body class="{{(\Request::is('login')) ? "login-" : ""}}">
 <div class="wrapper">
@@ -96,22 +99,7 @@
 <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
 <script src={{asset("admin/assets/js/paper-dashboard.min.js")}} type="text/javascript"></script>
  <script type="text/javascript">
-    tinymce.init({
-        setup: function (editor) {
-            editor.on('change', function () {
-                editor.save();
-            });
-        },
-        selector:'textarea.tinymce-editor',
-        branding: false,
-        plugins: [
-            "advlist autolink lists link image charmap print preview anchor",
-            "searchreplace visualblocks code fullscreen",
-            "insertdatetime media table contextmenu paste"
-        ],
-        toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
-
-    });
+     tinymce.init({selector:'textarea',selector:'textarea:not(.noEditor)',branding: false});
 </script>
 <script>
     <!--Active class on click-->

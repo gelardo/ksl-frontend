@@ -25,7 +25,7 @@
                                     <label>
                                         Description
                                     </label>
-                                    <textarea class="form-control tinymce-editor" name="description" value="{{old('description')}}" rows="3" cols="10" type="date" required="true" placeholder="Enter Your Description"></textarea>
+                                    <textarea class="form-control " name="description" value="{{old('description')}}" rows="3" cols="10" type="date" required="true" placeholder="Enter Your Description"></textarea>
                                 </div>
 
                                 <div class="form-group has-label">
@@ -33,20 +33,14 @@
                                        Image
                                         *
                                     </label>
+                                 <div class="fileinput fileinput-new text-center" data-provides="fileinput">
                                     <span class="btn btn-rose btn-round btn-file">
                                       <span class="fileinput-new">Select File</span>
-                                                                      <input class="form-control" name="image" type="file"  required="true" />
-                                                                            </span>
-
-
-                                    {{--                                    <div class="fileinput fileinput-new text-center" data-provides="fileinput">--}}
-{{--                                    <span class="btn btn-rose btn-round btn-file">--}}
-{{--                                      <span class="fileinput-new">Select File</span>--}}
-{{--                                      <input type="file" name="image">--}}
-{{--                                    </span>--}}
-{{--                                        <a href="javascript:;" class="btn btn-danger btn-round fileinput-exists"--}}
-{{--                                           data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>--}}
-{{--                                    </div>--}}
+                                      <input type="file" name="image">
+                                    </span>
+                                        <a href="javascript:;" class="btn btn-danger btn-round fileinput-exists"
+                                           data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
+                                    </div>
 
                                 </div>
                             </div>

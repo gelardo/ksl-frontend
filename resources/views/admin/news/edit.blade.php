@@ -1,10 +1,10 @@
-@extends('admin.layouts.layout')
+@extends('admin.layout.layout')
 
 @section('content')
 
     <div class="row">
         <div class="col-md-6">
-            <form id="RegisterValidation" action="{{url('admin/news/update',$entry_to_respond->id)}}" method="post">
+            <form id="RegisterValidation" enctype="multipart/form-data" action="{{url('admin/news/update',$entry_to_respond->id)}}" method="post">
                 @csrf
                 @method('PUT')
                 <div class="card ">
@@ -26,7 +26,7 @@
                                     <label>
                                         Description
                                     </label>
-                                    <textarea class="form-control" name="description" type="date" required="true" placeholder="Enter Your Description">{{ $entry_to_respond->description }}</textarea>
+                                    <textarea class="form-control " name="description" type="date" required="true" placeholder="Enter Your Description">{{ $entry_to_respond->description }}</textarea>
                                 </div>
 
                                 <div class="form-group has-label">

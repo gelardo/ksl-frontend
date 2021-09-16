@@ -50,7 +50,6 @@ class Blender {
         foreach ($validated as $key => $input){
 
             if(gettype($input) == 'object'){
-
                 $originalFileName = $input->getClientOriginalName();
                 $fileExt = $input->getClientOriginalExtension();
                 $originalFileNameWithoutExt = Str::of($originalFileName)->basename('.'.$fileExt);
