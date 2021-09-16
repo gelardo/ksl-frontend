@@ -185,118 +185,58 @@
     <!--DSE & CSE stock information start-->
     <div class="container custom-placement">
         <div class="row">
-            <div class="col-lg-6 col-12 mt-3" data-aos="zoom-in-up" data-aos-duration="500">
+            <div class="col-lg-6 col-12 mt-3" >
                 <div class="d-flex justify-content-center">
                     <img src="{{asset('assets/CSE.svg')}}" class="img-size" alt="...">
                 </div>
                 <div class="card table-card rounded mt-lg-3 mt-2 shadow-sm">
-                    <div class="card-body">
+                    <div class="card-body table-responsive">
 
-                        <table class="table table-hover">
+                        <table id="example2" class="display table table-bordered " style="width: 100%">
                             <thead>
                             <tr>
-                                <th class="th-custom">Today</th>
-                                <th class="th-custom">Lastday</th>
+                                <th>ID</th>
+                                <th>Company</th>
+                                <th>LTP</th>
+                                <th>Open</th>
+                                <th>HIGH</th>
+                                <th>LOW</th>
+                                <th>YCP</th>
+                                <th>Trade</th>
+                                <th>Value</th>
+                                <th>Volume</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td class="today down-color">18,532<i class="fas fa-caret-square-down"></i></td>
-                                <td class="lastday down-color">17,429<i class="fas fa-caret-square-down"></i></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="row m-0">
-                                        <p class="col-4 m-0 p-0 down-color t-fonts">-84</p>
-                                        <p class="col-4 m-0 p-0 down-color t-fonts">-0.45%</p>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="row m-0">
-                                        <p class="col-4 m-0 p-0 down-color t-fonts">-57</p>
-                                        <p class="col-4 m-0 p-0 down-color t-fonts">-0.31%</p>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="row m-0">
-                                        <p class="col-4 m-0 p-0 up-color t-fonts"><i class="fas fa-angle-up"></i>114</p>
-                                        <p class="col-4 m-0 p-0 down-color t-fonts"><i class="fas fa-angle-down"></i>163</p>
-                                        <p class="col-4 m-0 p-0 level-color t-fonts"><i class="fas fa-window-minimize"></i>32</p>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="row m-0">
-                                        <p class="col-4 m-0 p-0 up-color t-fonts"><i class="fas fa-angle-up"></i>114</p>
-                                        <p class="col-4 m-0 p-0 down-color t-fonts"><i class="fas fa-angle-down"></i>163</p>
-                                        <p class="col-4 m-0 p-0 level-color t-fonts"><i class="fas fa-window-minimize"></i>32</p>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="result">BDT 46,49,01,735</td>
-                                <td class="result">BDT 59,93,39,070</td>
-                            </tr>
                             </tbody>
                         </table>
 
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-12 mt-3" data-aos="zoom-in-up" data-aos-duration="500">
+            <div class="col-lg-6 col-12 mt-3" >
                 <div class="d-flex justify-content-center">
                     <img src="{{asset('assets/DSE.svg')}}" class="img-size" alt="...">
                 </div>
                 <div class="card table-card rounded mt-lg-3 mt-2 shadow-sm">
-                    <div class="card-body">
+                    <div class="card-body table-responsive">
 
-                        <table class="table table-hover">
+                        <table id="example" class="display table table-bordered" style="width:100%">
                             <thead>
                             <tr>
-                                <th class="th-custom">Today</th>
-                                <th class="th-custom">Lastday</th>
+                                <th>ID</th>
+                                <th>Company</th>
+                                <th>LTP</th>
+                                <th>HIGH</th>
+                                <th>LOW</th>
+                                <th>YCP</th>
+                                <th>Close Price</th>
+                                <th>Trade</th>
+                                <th>Change</th>
+                                <th>Volume</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td class="today down-color">18,532<i class="fas fa-caret-square-down"></i></td>
-                                <td class="lastday down-color">17,429<i class="fas fa-caret-square-down"></i></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="row m-0">
-                                        <p class="col-4 m-0 p-0 down-color t-fonts">-84</p>
-                                        <p class="col-4 m-0 p-0 down-color t-fonts">-0.45%</p>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="row m-0">
-                                        <p class="col-4 m-0 p-0 down-color t-fonts">-57</p>
-                                        <p class="col-4 m-0 p-0 down-color t-fonts">-0.31%</p>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="row m-0">
-                                        <p class="col-4 m-0 p-0 up-color t-fonts"><i class="fas fa-angle-up"></i>114</p>
-                                        <p class="col-4 m-0 p-0 down-color t-fonts"><i class="fas fa-angle-down"></i>163</p>
-                                        <p class="col-4 m-0 p-0 level-color t-fonts"><i class="fas fa-window-minimize"></i>32</p>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="row m-0">
-                                        <p class="col-4 m-0 p-0 up-color t-fonts"><i class="fas fa-angle-up"></i>114</p>
-                                        <p class="col-4 m-0 p-0 down-color t-fonts"><i class="fas fa-angle-down"></i>163</p>
-                                        <p class="col-4 m-0 p-0 level-color t-fonts"><i class="fas fa-window-minimize"></i>32</p>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="result">BDT 46,49,01,735</td>
-                                <td class="result">BDT 59,93,39,070</td>
-                            </tr>
                             </tbody>
                         </table>
 
@@ -309,7 +249,7 @@
 
     <!--market mover start-->
     <div class="container custom-placement1">
-        <p class="mm-title text-uppercase d-flex justify-content-center m-0" data-aos="fade-up" data-aos-duration="500">Market Mover</p>
+        <p class="mm-title text-uppercase d-flex justify-content-center m-0" >Market Mover</p>
         <div class="card table-card rounded mt-2 shadow-sm" data-aos="fade-up" data-aos-duration="800">
             <div class="card-body">
 

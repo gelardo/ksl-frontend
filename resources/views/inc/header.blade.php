@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="{{ asset('css/btn.css') }}">
     <link rel="stylesheet" href="{{ asset('css/slide.css') }}">
     <link rel="stylesheet" href="{{asset('css/laptopvideo.css')}}">
+    <link rel="stylesheet" href="{{asset('css/kakku/kakkuStyle.css')}}">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
     <title>Kabir Securities Limited</title>
 </head>
 

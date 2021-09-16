@@ -122,7 +122,8 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
-
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="{{ asset('js/kakku/kakku.js') }}"></script>
 <script>
     $(document).ready(function() {
         $('.counter').counterUp({
@@ -131,6 +132,67 @@
         });
 
     });
+
+    kakkuGetDSE().then(res => {
+        TemplateDSE({
+            data: res,
+            domEl: '.dse',
+        })
+    })
+    kakkuGetCSE().then(res => {
+        TemplateCSE({
+            data: res,
+            domEl: '.cse',
+            bg: '#115852'
+        })
+    })
+    $(document).ready(function () {
+        var table = $('#example').DataTable({
+            "language": {
+                "emptyTable": "Loading data please wait "
+            },
+
+        });
+        kakkuGetDSEAll().then(res => {
+            res.map((r, i) => {
+                table.row.add([
+                    r.no,
+                    r.tradingCode,
+                    r.ltp,
+                    r.low,
+                    r.high,
+                    r.ycp,
+                    r.closep,
+                    r.trade,
+                    r.change,
+                    r.value,
+                    r.volume
+                ]).draw(false);
+            })
+        })
+
+        var table2 = $('#example2').DataTable({
+            "language": {
+                "emptyTable": "Loading data please wait "
+            },
+        });
+        kakkuGetCSEAll().then(res => {
+            res.map((r, i) => {
+                table2.row.add([
+                    r.no,
+                    r.tradingCode,
+                    r.ltp,
+                    r.open,
+                    r.high,
+                    r.low,
+                    r.ycp,
+                    r.trade,
+                    r.value,
+                    r.volume
+                ]).draw(false);
+            })
+        })
+    })
 </script>
 
 

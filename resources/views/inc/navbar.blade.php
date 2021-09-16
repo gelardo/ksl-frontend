@@ -1,67 +1,20 @@
 <!--stock information start-->
 <nav class="navbar navbar-light bg-light p-0 sticky-top shadow-sm">
-    <div class="container-fluid p-0 autoplay animate__animated animate__fadeInDown">
-        <div class="card up-card">
-            <div class="card-body text-center">
-                <p class="up-card-text mb-0"><i class="me-2 fas fa-caret-square-up"></i>1 STPRIMFMF 20.50</p>
-            </div>
+{{--    <div class="container-fluid p-0 autoplay animate__animated animate__fadeInDown">--}}
+        <div class="dse">
+            <div class="loading">Loading...</div>
         </div>
-
-        <div class="card down-card">
-            <div class="card-body text-center">
-                <p class="down-card-text mb-0"><i class="me-2 ms-0 fas fa-caret-square-down"></i>1 STPRIMFMF 20.50</p>
-            </div>
+        <div class="cse">
+            <div class="loading">Loading...</div>
         </div>
+{{--        <div class="card up-card">--}}
+{{--            <div class="card-body text-center">--}}
+{{--                <p class="up-card-text mb-0"><i class="me-2 fas fa-caret-square-up"></i>1 STPRIMFMF 20.50</p>--}}
+{{--            </div>--}}
+{{--        </div>--}}
 
-        <div class="card up-card">
-            <div class="card-body text-center">
-                <p class="up-card-text mb-0"><i class="me-2 fas fa-caret-square-up"></i>1 STPRIMFMF 20.50</p>
-            </div>
-        </div>
+{{--    </div>--}}
 
-        <div class="card up-card">
-            <div class="card-body text-center">
-                <p class="up-card-text mb-0"><i class="me-2 fas fa-caret-square-up"></i>1 STPRIMFMF 20.50</p>
-            </div>
-        </div>
-
-        <div class="card up-card">
-            <div class="card-body text-center">
-                <p class="up-card-text mb-0"><i class="me-2 fas fa-caret-square-up"></i>1 STPRIMFMF 20.50</p>
-            </div>
-        </div>
-
-        <div class="card down-card">
-            <div class="card-body text-center">
-                <p class="down-card-text mb-0"><i class="me-2 ms-0 fas fa-caret-square-down"></i>1 STPRIMFMF 20.50</p>
-            </div>
-        </div>
-
-        <div class="card down-card">
-            <div class="card-body text-center">
-                <p class="down-card-text mb-0"><i class="me-2 ms-0 fas fa-caret-square-down"></i>1 STPRIMFMF 20.50</p>
-            </div>
-        </div>
-
-        <div class="card up-card">
-            <div class="card-body text-center">
-                <p class="up-card-text mb-0"><i class="me-2 fas fa-caret-square-up"></i>1 STPRIMFMF 20.50</p>
-            </div>
-        </div>
-
-        <div class="card up-card">
-            <div class="card-body text-center">
-                <p class="up-card-text mb-0"><i class="me-2 fas fa-caret-square-up"></i>1 STPRIMFMF 20.50</p>
-            </div>
-        </div>
-
-        <div class="card up-card">
-            <div class="card-body text-center">
-                <p class="up-card-text mb-0"><i class="me-2 fas fa-caret-square-up"></i>1 STPRIMFMF 20.50</p>
-            </div>
-        </div>
-
-    </div>
 </nav>
 <!--stock information end end-->
 
