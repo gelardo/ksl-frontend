@@ -682,3 +682,6 @@
     </div>
     <!--get started end-->
 @endsection
+@push('for-index')
+    document.querySelector('#cse-nav-gainer').innerHTML += '<img src="'+loadingAsset+'" />';
+@endpush

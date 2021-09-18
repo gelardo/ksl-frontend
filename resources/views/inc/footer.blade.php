@@ -127,7 +127,7 @@
 <script>
     var loadingAsset = '/assets/loading.gif';
     $(document).ready(function() {
-        document.querySelector('#cse-nav-gainer').innerHTML += '<img src="'+loadingAsset+'" />';
+
         $('.counter').counterUp({
             delay: 10,
             time: 1200
@@ -138,6 +138,7 @@
                 domEl: '.dse',
             })
         })
+      @stack('index-push')
         kakkuGetCSE().then(res => {
             TemplateCSE({
                 data: res,
