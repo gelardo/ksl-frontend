@@ -77,7 +77,8 @@ async function kakkuGetCSE() {
       let obj = {
         name: td[0].innerText,
         f: td[1].innerText,
-        l: td[2].innerText
+        l: td[2].innerText.split(/[ ,]+/).filter(x => !/^\s*$/.test(x))
+
       };
       data.push(obj);
     }
@@ -86,6 +87,7 @@ async function kakkuGetCSE() {
       "something wrong!! plz send report to who write this code with your Curse"
     );
   }
+  console.log(data)
   return data;
 }
 
@@ -121,6 +123,7 @@ async function kakkuGetDSEAll() {
     );
   }
   return data;
+
 }
 
 //Chittogong Stock Exchage Total Data Table
@@ -153,6 +156,7 @@ async function kakkuGetCSEAll() {
       "something wrong!! plz send report to who write this code with your Curse"
     );
   }
+    console.log(data)
   return data;
 }
 
@@ -165,7 +169,7 @@ function TemplateDSE(obj = []) {
     let mess = "Your Given ID/Class is Wrong";
     throw new Error(mess);
   }
-  let speed = obj.scrolldelay ? obj.scrolldelay : 5;
+  let speed = obj.scrolldelay ? obj.scrolldelay : 20;
   let bg = obj.bg ? obj.bg : "#49244e;";
   let textColor = obj.textColor ? obj.textColor : "#333";
   viewDom.innerHTML = `<div class="dsetem1" style="background: ${bg};color:${textColor}">
@@ -201,7 +205,7 @@ function TemplateCSE(obj = []) {
     let mess = "Your Given ID/Class is Wrong";
     throw new Error(mess);
   }
-  let speed = obj.scrolldelay ? obj.scrolldelay : 5;
+  let speed = obj.scrolldelay ? obj.scrolldelay : 20;
   let bg = obj.bg ? obj.bg : "#49244e;";
   let textColor = obj.textColor ? obj.textColor : "#333";
   viewDom.innerHTML = `<div class="dsetem1" style="background: ${bg};color:${textColor}">

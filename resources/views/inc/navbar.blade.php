@@ -22,7 +22,7 @@
 <div class="header-inner">
     <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-transparent text-center">
         <div class="container animate__animated animate__fadeInDown">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="{{url('/')}}">
                 <img src="assets/logo.png" alt="" height="35">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

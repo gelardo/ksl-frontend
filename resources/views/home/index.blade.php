@@ -33,7 +33,7 @@
                             <div class="swiper-wrapper">
 
                                 <div class="swiper-slide">
-                                    <p class="banner-slider-des">One of the leading stock brocker in Bangladesh.</p>
+                                    <p class="banner-slider-des">One of the leading stock broker in Bangladesh.</p>
                                 </div>
 
                                 <div class="swiper-slide">
@@ -49,7 +49,7 @@
                     </div>
 
                     <div class="d-flex justify-content-lg-start justify-content-center mt-md-4 mt-2">
-                        <a href="getstarted.html" class=" btn login-btn shadow-sm rounded-pill px-4 py-2" type="login button ">Start Investing</a>
+                        <a href="{{url('getstarted')}}" class=" btn login-btn shadow-sm rounded-pill px-4 py-2" type="login button ">Start Investing</a>
                     </div>
 
                 </div>
@@ -185,14 +185,14 @@
     <!--DSE & CSE stock information start-->
     <div class="container custom-placement">
         <div class="row">
-            <div class="col-lg-6 col-12 mt-3" >
+            <div class="col-lg-12 col-12 mt-3" >
                 <div class="d-flex justify-content-center">
                     <img src="{{asset('assets/CSE.svg')}}" class="img-size" alt="...">
                 </div>
                 <div class="card table-card rounded mt-lg-3 mt-2 shadow-sm">
-                    <div class="card-body table-responsive">
+                    <div class="card-body" id="cse-data-main">
 
-                        <table id="example2" class="display table table-bordered " style="width: 100%">
+                        <table id="example2" class="table table-hover " style="width: 100%">
                             <thead>
                             <tr>
                                 <th>ID</th>
@@ -214,14 +214,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-12 mt-3" >
+            <div class="col-lg-12 col-12 mt-3" >
                 <div class="d-flex justify-content-center">
                     <img src="{{asset('assets/DSE.svg')}}" class="img-size" alt="...">
                 </div>
                 <div class="card table-card rounded mt-lg-3 mt-2 shadow-sm">
-                    <div class="card-body table-responsive">
+                    <div class="card-body " id="dse-data-main">
 
-                        <table id="example" class="display table table-bordered" style="width:100%">
+                        <table id="example" class="table table-hover" style="width:100%">
                             <thead>
                             <tr>
                                 <th>ID</th>
@@ -249,7 +249,7 @@
 
     <!--market mover start-->
     <div class="container custom-placement1">
-        <p class="mm-title text-uppercase d-flex justify-content-center m-0" >Market Mover</p>
+        <p class="mm-title text-uppercase d-flex justify-content-center m-0" >DSE Market Mover</p>
         <div class="card table-card rounded mt-2 shadow-sm" data-aos="fade-up" data-aos-duration="800">
             <div class="card-body">
 
@@ -257,105 +257,119 @@
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                         <button class="nav-link active" id="nav-gainer-tab" data-bs-toggle="tab" data-bs-target="#nav-gainer" type="button" role="tab" aria-controls="nav-gainer" aria-selected="true">Gainer</button>
                         <button class="nav-link" id="nav-loser-tab" data-bs-toggle="tab" data-bs-target="#nav-loser" type="button" role="tab" aria-controls="nav-loser" aria-selected="false">Loser</button>
-                        <button class="nav-link" id="nav-taka-tab" data-bs-toggle="tab" data-bs-target="#nav-taka" type="button" role="tab" aria-controls="nav-taka" aria-selected="false">Taka</button>
+                        <button class="nav-link" id="nav-taka-tab" data-bs-toggle="tab" data-bs-target="#nav-taka" type="button" role="tab" aria-controls="nav-taka" aria-selected="false">All</button>
                     </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-gainer" role="tabpanel" aria-labelledby="nav-gainer-tab">
 
-                        <table class="table table-hover mt-2">
+                        <table  id="taka-table-gainer" class="table table-hover mt-2">
                             <thead>
                             <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Company</th>
+                                <th scope="col">INSTRUMENT	</th>
                                 <th scope="col">LTP</th>
                                 <th scope="col">%Change</th>
+                                <th scope="col">Volume</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>SONALILIFE</td>
-                                <td>84.00</td>
-                                <td>425.00</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>BEACONPHAR</td>
-                                <td>156.40</td>
-                                <td>10.00</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>SAMATALETH</td>
-                                <td>83.60</td>
-                                <td>10.00</td>
-                            </tr>
+
                             </tbody>
                         </table>
 
                     </div>
                     <div class="tab-pane fade" id="nav-loser" role="tabpane2" aria-labelledby="nav-loser-tab">
-                        <table class="table table-hover mt-2">
+                        <table  id="taka-table-loser" class="table table-hover mt-2">
                             <thead>
                             <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Company</th>
+                                <th scope="col">INSTRUMENT	</th>
+                                <th scope="col">LTP</th>
+                                <th scope="col">%Change</th>
+                                <th scope="col">Volume</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="nav-taka" role="tabpane3" aria-labelledby="nav-taka-tab">
+                        <table id="taka-table-all" class="table table-hover mt-2">
+                            <thead>
+                            <tr>
+                                <th scope="col">INSTRUMENT	</th>
+                                <th scope="col">LTP</th>
+                                <th scope="col">%Change</th>
+                                <th scope="col">Volume</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--market mover end-->
+
+    <!--market mover start-->
+    <div class="container custom-placement1">
+        <p class="mm-title text-uppercase d-flex justify-content-center m-0" >CSE Market Mover</p>
+        <div class="card table-card rounded mt-2 shadow-sm" data-aos="fade-up" data-aos-duration="800">
+            <div class="card-body">
+
+                <nav>
+                    <div class="nav nav-tabs" id="cse-nav-tab" role="tablist">
+                        <button class="nav-link active" id="cse-nav-gainer-tab" data-bs-toggle="tab" data-bs-target="#cse-nav-gainer" type="button" role="tab" aria-controls="cse-nav-gainer" aria-selected="true">Gainer</button>
+                        <button class="nav-link" id="cse-nav-loser-tab" data-bs-toggle="tab" data-bs-target="#cse-nav-loser" type="button" role="tab" aria-controls="cse-nav-loser" aria-selected="false">Loser</button>
+                        <button class="nav-link" id="cse-nav-taka-tab" data-bs-toggle="tab" data-bs-target="#cse-nav-taka" type="button" role="tab" aria-controls="cse-nav-taka" aria-selected="false">All</button>
+                    </div>
+                </nav>
+                <div class="tab-content" id="cse-nav-tabContent">
+                    <div class="tab-pane fade show active" id="cse-nav-gainer" role="tabpanel" aria-labelledby="cse-nav-gainer-tab">
+
+                        <table  id="cse-taka-table-gainer" class="table table-hover mt-2">
+                            <thead>
+                            <tr>
+                                <th scope="col">INSTRUMENT</th>
                                 <th scope="col">LTP</th>
                                 <th scope="col">%Change</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>ICBAMCL2ND</td>
-                                <td>84.00</td>
-                                <td>425.00</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>SUNLIFEINS</td>
-                                <td>156.40</td>
-                                <td>10.00</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>BNICL</td>
-                                <td>83.60</td>
-                                <td>10.00</td>
-                            </tr>
+
                             </tbody>
                         </table>
+
                     </div>
-                    <div class="tab-pane fade" id="nav-taka" role="tabpane3" aria-labelledby="nav-taka-tab">
-                        <table class="table table-hover mt-2">
+                    <div class="tab-pane fade" id="cse-nav-loser" role="tabpane2" aria-labelledby="cse-nav-loser-tab">
+                        <table  id="cse-taka-table-loser" class="table table-hover mt-2">
                             <thead>
                             <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Company</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Value(mm)</th>
+                                <th scope="col">INSTRUMENT	</th>
+                                <th scope="col">LTP</th>
+                                <th scope="col">%Change</th>
                             </tr>
                             </thead>
                             <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="cse-nav-taka" role="tabpane3" aria-labelledby="cse-nav-taka-tab">
+                        <table id="cse-taka-table-all" class="table table-hover mt-2">
+                            <thead>
                             <tr>
-                                <th scope="row">1</th>
-                                <td>ICBAMCL2ND</td>
-                                <td>84.00</td>
-                                <td>425.00</td>
+                                <th scope="col">INSTRUMENT	</th>
+                                <th scope="col">LTP</th>
+                                <th scope="col">%Change</th>
                             </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>SUNLIFEINS</td>
-                                <td>156.40</td>
-                                <td>10.00</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>BNICL</td>
-                                <td>83.60</td>
-                                <td>10.00</td>
-                            </tr>
+                            </thead>
+                            <tbody>
+
                             </tbody>
                         </table>
                     </div>
@@ -398,7 +412,7 @@
                         <div class="col-md-4 col-12 my-2" data-aos="zoom-in-up" data-aos-duration="500">
 
                             <ion-icon name="prism-outline"></ion-icon>
-                            <h5 class="card-title">DP</h5>assets/Investment data-rafiki.png
+                            <h5 class="card-title">DP</h5>=
                             <p class="s-card-des">We are a depository participant at Central Depository Bangladesh Ltd. with all the services.</p>
 
                         </div>
@@ -661,7 +675,7 @@
             <div class="container">
                 <p class="gs-text">Accept & Disburse Every Payment Quickly, <br>Easily & Securely.</p>
                 <div class="mt-md-4 mt-3">
-                    <a href="getstarted.html" target="" class="about-btn rounded-pill px-4 py-2 shadow-sm">Get Started Today</a>
+                    <a href="{{url('/getstarted')}}" target="" class="about-btn rounded-pill px-4 py-2 shadow-sm">Get Started Today</a>
                 </div>
             </div>
         </section>

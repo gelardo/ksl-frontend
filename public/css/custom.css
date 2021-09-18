@@ -607,7 +607,7 @@ button:focus {
 }
 
 
-/* 
+/*
 .about-card {
     border: none;
     background-color: none;
@@ -1892,5 +1892,17 @@ button:focus {
     }
 }
 
-
+#cse-data-main img{    display: block;
+    margin: 0 auto;
+    width: 12%;}
+#dse-data-main img{    display: block;
+    margin: 0 auto;
+    width: 12%;}
+#cse-nav-gainer img{    display: block;
+    margin: 0 auto;
+    width: 12%;}
+#nav-gainer img{    display: block;
+    margin: 0 auto;
+    width: 12%;}
+table.table thead th{text-align: center;}
 /*****************************/

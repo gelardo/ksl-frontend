@@ -225,20 +225,25 @@
                     <div class="container p-0 mt-md-5 mt-4">
                         <div class="row">
                             <div class="col-md-6 col-12" data-aos="zoom-in-down" data-aos-duration="1000">
-                                <img src="assets/founder.png" class="founder-img rounded" alt="...">
+                                <img src="{{ asset('assets/ch.jpg') }}" class="founder-img rounded" alt="...">
                             </div>
                             <div class="col-md-6 col-12" data-aos="zoom-in-down" data-aos-duration="1000">
                                 <div class="card about-card rounded border-0 h-100">
                                     <section class="founder-section-bg">
                                         <div class="card-body">
-                                            <p class="founder-title text-lg-start text-center m-0">MOHAMMED ALAMGIR KABIR</p>
-                                            <p class="text-uppercase text-lg-start text-center about-founder-des m-0 mb-2">MANAGING DIRECTOR</p>
-                                            <p class="text-justify founder-des">We take pride in being one of the pioneer Stock Broker Companies in Bangladesh having achieved remarkable growth over the last twelve years and contributing significantly to the development of market of Bangladesh.
-                                                The Company has attained prominence as a leader in the field of Stock Broker business through competence, competitiveness and attaining with highest quality services to its Clients. We have a long tradition
-                                                of serving our valued customers to their complete satisfaction through efficient management and excellent workmanship, which we continue to maintain with our untiring efforts.</p>
-                                            <p class="text-justify founder-des">In an era of modern technologies and new techniques, we continuously strive for innovation and enhanced efficiency.</p>
-                                            <p class="text-justify founder-des">As we look to the years ahead we introduced competitive products to remain committed to excellence, keep abreast of changes and innovations, adopt better management and successfully overcome all challenges before
-                                                us.
+                                            <p class="founder-title text-lg-start text-center m-0">ROWSHAN ARA ALAM</p>
+                                            <p class="text-uppercase text-lg-start text-center about-founder-des m-0 mb-2">CHAIRPERSON</p>
+                                            <p class="text-justify founder-des">We have a proud history in the capital
+                                                market of Bangladesh having established our first operation nearly 12 years ago.
+                                                Our priority always remains our clients, who we believe are at the heart of our existence.
+                                                We tailor our services to suit local needs and desires and ensure that
+                                                our clients are always satisfied with us.
+                                                We always try our level best to comply with business norms and ethics,
+                                                national laws and ensure that our actions are sound, just and viable.
+                                                For that reason, we will always be responsive to the needs of our communities,
+                                                and ultimately our clients.I would like to sincerely thank you,
+                                                our valued clients, for your continued support in ensuring that
+                                                we become a leading brokerage house in Bangladesh.
                                             </p>
                                         </div>
                                     </section>
@@ -251,7 +256,7 @@
                     <div class="container p-0 custom-margin">
                         <div class="row">
                             <div class="col-md-6 col-12 d-md-none d-block" data-aos="zoom-in-down" data-aos-duration="1000">
-                                <img src="assets/founder.png" class="founder-img rounded" alt="...">
+                                <img src="{{ asset('assets/founder.png') }}" class="founder-img rounded" alt="...">
                             </div>
                             <div class="col-md-6 col-12" data-aos="zoom-in-down" data-aos-duration="1000">
                                 <div class="card about-card rounded border-0 h-100">

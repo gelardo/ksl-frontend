@@ -21,7 +21,15 @@ Route::get('/', [HomeController::class,'indexnew']);
 //Route::get('/news', function () {
 //    return view('home.news');
 //});
-
+//Route::get('/withoutcors/{url}', function (){
+//    dd($_GET['url']);
+////    if(!empty($_GET['url'])){
+////        $url = $_GET['url'];
+////        print file_get_contents($url);
+////    }else{
+////        echo 'Something wrong with url';
+////    }
+//});
 Route::get('/news',[NewsController::class,'news']);
 Route::get('/services', function () {
     return view('home.services');

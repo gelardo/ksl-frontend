@@ -125,33 +125,78 @@
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 <script src="{{ asset('js/kakku/kakku.js') }}"></script>
 <script>
+    var loadingAsset = '/assets/loading.gif';
     $(document).ready(function() {
+        document.querySelector('#cse-nav-gainer').innerHTML += '<img src="'+loadingAsset+'" />';
         $('.counter').counterUp({
             delay: 10,
             time: 1200
         });
-
-    });
-
-    kakkuGetDSE().then(res => {
-        TemplateDSE({
-            data: res,
-            domEl: '.dse',
+        kakkuGetDSE().then(res => {
+            TemplateDSE({
+                data: res,
+                domEl: '.dse',
+            })
         })
-    })
-    kakkuGetCSE().then(res => {
-        TemplateCSE({
-            data: res,
-            domEl: '.cse',
-            bg: '#115852'
+        kakkuGetCSE().then(res => {
+            TemplateCSE({
+                data: res,
+                domEl: '.cse',
+                bg: '#115852'
+            })
+            var table6 = $('#cse-taka-table-loser').DataTable({
+                "language": {
+                    "emptyTable": "Loading data please wait "
+                },
+                "order": [[ 2, "asc" ]]
+            });
+            console.log(res);
+            res.map((r, i) => {
+
+                table6.row.add([
+                    r.name,
+                    r.f,
+                    r.l[1]
+                ]).draw(false);
+            })
+            var table7 = $('#cse-taka-table-all').DataTable({
+                "language": {
+                    "emptyTable": "Loading data please wait "
+                },
+            });
+            res.map((r, i) => {
+
+                table7.row.add([
+                    r.name,
+                    r.f,
+                    r.l[1]
+                ]).draw(false);
+            })
+            // myBooks.push(data);
+            var table8 = $('#cse-taka-table-gainer').DataTable({
+                "language": {
+                    "emptyTable": "Loading data please wait "
+                },
+                "order": [[ 2, "desc" ]]
+            });
+            res.map((r, i) => {
+
+                table8.row.add([
+                    r.name,
+                    r.f,
+                    r.l[1]
+                ]).draw(false);
+            })
+            document.querySelector('#cse-nav-gainer img').remove();
         })
-    })
-    $(document).ready(function () {
+        document.querySelector('#dse-data-main').innerHTML += '<img src="'+loadingAsset+'" />';
+        // $("#cse-data-main").html(`<img src="${loadingAsset}"/>`);
+        // $("#dse-data-main").html(`<img src="${loadingAsset}"/>`);
+         document.querySelector('#cse-data-main').innerHTML += '<img src="'+loadingAsset+'" />';
         var table = $('#example').DataTable({
             "language": {
                 "emptyTable": "Loading data please wait "
             },
-
         });
         kakkuGetDSEAll().then(res => {
             res.map((r, i) => {
@@ -169,6 +214,7 @@
                     r.volume
                 ]).draw(false);
             })
+            document.querySelector('#dse-data-main img').remove();
         })
 
         var table2 = $('#example2').DataTable({
@@ -191,8 +237,90 @@
                     r.volume
                 ]).draw(false);
             })
+             document.querySelector('#cse-data-main img').remove();
         })
-    })
+          CreateTableFromJSON();
+        // document.querySelector('#cse-data-main img').remove();
+        // $("#dse-data-main img").remove();
+        // $("#cse-data-main img").remove();
+        // document.querySelector('#dse-data-main img').remove();
+    });
+    function CreateTableFromJSON() {
+
+        var myBooks = null;
+
+        document.querySelector('#nav-gainer').innerHTML += '<img src="'+loadingAsset+'" />';
+        fetch('api/withoutcors/')
+        // fetch('https://peaceful-mountain-17529.herokuapp.com?/?url=https://www.amarstock.com/LatestPrice/34267d8d73dd')
+            .then(
+                function(response) {
+                    if (response.status !== 200) {
+                        console.log('Looks like there was a problem. Status Code: ' +
+                            response.status);
+                        return;
+                    }
+
+                    // Examine the text in the response
+                    response.json().then(function(data) {
+                        // myBooks.push(data);
+                        var table4 = $('#taka-table-loser').DataTable({
+                            "language": {
+                                "emptyTable": "Loading data please wait "
+                            },
+                            "order": [[ 2, "asc" ]]
+                        });
+                        data.map((r, i) => {
+
+                            table4.row.add([
+                                r.Scrip,
+                                r.LTP,
+                                r.ChangePer,
+                                r.Volume,
+                            ]).draw(false);
+                        })
+                        var table5 = $('#taka-table-all').DataTable({
+                            "language": {
+                                "emptyTable": "Loading data please wait "
+                            },
+                        });
+                        data.map((r, i) => {
+
+                            table5.row.add([
+                                r.Scrip,
+                                r.LTP,
+                                r.ChangePer,
+                                r.Volume,
+                            ]).draw(false);
+                        })
+                        // myBooks.push(data);
+                        var table3 = $('#taka-table-gainer').DataTable({
+                            "language": {
+                                "emptyTable": "Loading data please wait "
+                            },
+                            "order": [[ 2, "desc" ]]
+                        });
+                        data.map((r, i) => {
+
+                            table3.row.add([
+                                r.Scrip,
+                                r.LTP,
+                                r.ChangePer,
+                                r.Volume,
+                            ]).draw(false);
+                        })
+                         document.querySelector('#nav-gainer img').remove();
+                    });
+                }
+            )
+            .catch(function(err) {
+                console.log('Fetch Error :-S', err);
+            });
+
+
+        // EXTRACT VALUE FOR HTML HEADER.
+        // ('Book ID', 'Book Name', 'Category' and 'Price')
+
+    }
 </script>
 
 
