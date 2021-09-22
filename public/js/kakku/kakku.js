@@ -87,7 +87,6 @@ async function kakkuGetCSE() {
       "something wrong!! plz send report to who write this code with your Curse"
     );
   }
-  console.log(data)
   return data;
 }
 
@@ -156,7 +155,6 @@ async function kakkuGetCSEAll() {
       "something wrong!! plz send report to who write this code with your Curse"
     );
   }
-    console.log(data)
   return data;
 }
 

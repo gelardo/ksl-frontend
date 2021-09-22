@@ -138,7 +138,7 @@
                 domEl: '.dse',
             })
         })
-      @stack('index-push')
+      @stack('for-index')
         kakkuGetCSE().then(res => {
             TemplateCSE({
                 data: res,
@@ -151,7 +151,6 @@
                 },
                 "order": [[ 2, "asc" ]]
             });
-            console.log(res);
             res.map((r, i) => {
 
                 table6.row.add([

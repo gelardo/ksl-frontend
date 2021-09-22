@@ -21,12 +21,13 @@
     <link rel="stylesheet" href="{{asset('css/slick.css')}}">
 
     <!--custom design link-->
-    <link rel="stylesheet" href="{{asset('css/custom.css')}}">
     <link rel="stylesheet" href="{{ asset('css/btn.css') }}">
     <link rel="stylesheet" href="{{ asset('css/slide.css') }}">
     <link rel="stylesheet" href="{{asset('css/laptopvideo.css')}}">
     <link rel="stylesheet" href="{{asset('css/kakku/kakkuStyle.css')}}">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+
+    <link rel="stylesheet" href="{{asset('css/custom.css')}}">
     <title>Kabir Securities Limited</title>
 </head>
 

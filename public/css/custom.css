@@ -1905,4 +1905,10 @@ button:focus {
     margin: 0 auto;
     width: 12%;}
 table.table thead th{text-align: center;}
+table.table .sorting_1,.dataTables_info {color: var(--primary-color) !important;}
+a.paginate_button{color: var(--primary-color) !important;}
+.dataTables_length label{color: var(--primary-color)}
+.dataTables_length select{color: var(--primary-color);border-color: var(--primary-color);}
+.dataTables_filter input{color: var(--primary-color);}
+.dataTables_filter label{color: var(--primary-color);}
 /*****************************/
